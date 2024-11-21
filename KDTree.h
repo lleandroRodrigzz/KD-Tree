@@ -53,8 +53,9 @@ void ordenarPontosNivel(int pontos[N][K], int inicio, int fim, int discri)
 
 void exibeCordenadas(int pontos[N][K])
 {
+	printf("\n\t");
 	for (int i = 0; i < N; i++)
-        printf("\t-(%d, %d)-\n", pontos[i][0], pontos[i][1]);
+        printf("(%d, %d) - ", pontos[i][0], pontos[i][1]);
     printf("\n\n");
 }
 /*-----------------------------------------------------------*/
@@ -67,7 +68,7 @@ float distanciaEuclidiana(int ponto[], int ponto1[])
 	
 	for(i = 0; i < K; i++)
 	{
-		dist += pow(ponto[i] - ponto[i], 2);
+		dist += pow(ponto[i] - ponto1[i], 2);
 	}
 	return sqrt(dist);
 }
